@@ -1,48 +1,30 @@
-import React, { useState } from 'react';
-import { Button, AppBar, Toolbar, Typography, useMediaQuery, useTheme, IconButton, Drawer } from '@material-ui/core';
-import { Menu } from '@material-ui/icons';
-import SiteContents from './SiteContents';
-
-
-const TopBarElements = ({ children, icon }) => {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
-
-  return matches ? children : icon;
-}
+import React, { useState } from 'react'
+import SiteContents from './SiteContents'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 const App = () => {
-
-  const [showAbout, toggleShowAbout] = useState(true);
-  const [showProjects, toggleShowProjects] = useState(false);
-  const [showContact, toggleShowContact] = useState(false);
-  const [showMusic, toggleShowMusic] = useState(false);
-  const [openDrawer, toggleOpenDrawer] = useState(false);
-
   return (
-    <div>
-      <AppBar position='sticky' color='default'>
-        <Toolbar>
-          <Typography variant="h6">Connor Wilson</Typography>
-          <TopBarElements
-            icon={
-              <IconButton edge="start" onClick={() => toggleOpenDrawer(!openDrawer)}>
-                <Menu/>
-              </IconButton>
-            }>
-            <SiteContents/>
-          </TopBarElements>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="persistent"
-        anchor="right"
-        open={openDrawer}
-      >
-        <SiteContents/>
-      </Drawer>
-    </div>
+    <Router>
+      <Link to="/">About</Link>
+      <Link to="/contact">Contact</Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/music">Music</Link>
+      <Switch>
+        <Route path="/music">
+          <div>music links</div>
+        </Route>
+        <Route path="/contact">
+          <div>Contact information</div>
+        </Route>
+        <Route path="/projects">
+          <div>Project Info</div>
+        </Route>
+        <Route path="/">
+          <div>About Connor</div>
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
-export default App;
+export default App
