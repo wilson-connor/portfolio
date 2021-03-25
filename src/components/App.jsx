@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import SiteContents from './SiteContents'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import './styles.css'
-import SideMenu from './SideMenu'
-import About from './About'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import './styles.css';
+import SideMenu from './SideMenu';
+import About from './About';
 
 const App = () => {
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
   const handleClick = () => {
-    setClicked(!clicked)
-  }
+    setClicked(!clicked);
+  };
   const closeMobileMenu = () => {
-    setClicked(false)
-  }
+    setClicked(false);
+  };
 
   return (
     <Router>
@@ -40,7 +39,7 @@ const App = () => {
         </Switch>
       </div>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
