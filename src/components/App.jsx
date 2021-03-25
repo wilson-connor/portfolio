@@ -3,6 +3,7 @@ import SiteContents from './SiteContents'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import './styles.css'
 import SideMenu from './SideMenu'
+import About from './About'
 
 const App = () => {
   const [clicked, setClicked] = useState(false)
@@ -15,7 +16,7 @@ const App = () => {
 
   return (
     <Router>
-      <nav>
+      <nav className={clicked ? 'nav nav-active' : 'nav'}>
         <SideMenu
           closeMobileMenu={closeMobileMenu}
           handleClick={handleClick}
@@ -34,7 +35,7 @@ const App = () => {
             <div>Project Info</div>
           </Route>
           <Route path="/">
-            <div>About Connor</div>
+            <About />
           </Route>
         </Switch>
       </div>

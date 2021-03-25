@@ -23,7 +23,11 @@ const SideMenu = ({ closeMobileMenu, handleClick, clicked }) => {
         <Link to="/music">Music</Link>
       </li>
       <li className="toggle" onClick={handleClick}>
-        {clicked ? <FaTimes size={50} /> : <FaBars size={40} color={'white'} />}
+        {clicked ? (
+          <FaTimes size={50} color={'white'} />
+        ) : (
+          <FaBars size={40} color={'white'} />
+        )}
       </li>
     </ul>
   )

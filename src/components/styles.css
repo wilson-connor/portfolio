@@ -7,12 +7,18 @@
 body {
   font-family: sans-serif;
   font-size: 16px;
+  background: #bfbfbf;
 }
 
-nav {
+.nav {
   background: #222;
   padding: 0 15px;
-  /* position: sticky; */
+  transition: all 1s;
+  max-height: 70px;
+}
+
+.nav-active {
+  max-height: 1000px;
 }
 
 a {
@@ -85,4 +91,23 @@ ul {
     display: block;
     width: auto;
   }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-item {
+  margin: 10px;
+}
+
+.card {
+  display: block;
+}
+
+.card-image {
+  max-height: 300px;
+  border-radius: 50%;
 }
