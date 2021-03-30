@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './styles.css';
 import SideMenu from './SideMenu';
 import About from './About';
+import Contact from './Contact';
+import regeneratorRuntime from 'regenerator-runtime';
 
 const App = () => {
   const [clicked, setClicked] = useState(false);
@@ -28,7 +30,7 @@ const App = () => {
             <div>music links</div>
           </Route>
           <Route path="/contact">
-            <div>Contact information</div>
+            <Contact />
           </Route>
           <Route path="/projects">
             <div>Project Info</div>

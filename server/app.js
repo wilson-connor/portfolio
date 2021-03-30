@@ -27,7 +27,7 @@ app.post('/email', (req, res) => {
     try {
       await mailer(body);
       res.status(201).end();
-      console.log('success');
+      console.log(body);
     } catch (err) {
       res.status(500).end();
     }

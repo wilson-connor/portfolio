@@ -93,6 +93,10 @@ ul {
     display: block;
     width: auto;
   }
+
+  .content {
+    display: grid;
+  }
 }
 
 /* Site Content */
