@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const SideMenu = ({ closeMobileMenu, handleClick, clicked }) => {
-  const isClickedItem = clicked ? 'item active' : 'item'
+  const isClickedItem = clicked ? 'item active' : 'item';
 
   return (
     <ul className="menu">
@@ -30,7 +30,7 @@ const SideMenu = ({ closeMobileMenu, handleClick, clicked }) => {
         )}
       </li>
     </ul>
-  )
-}
+  );
+};
 
-export default SideMenu
+export default SideMenu;

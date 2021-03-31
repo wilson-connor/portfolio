@@ -4,6 +4,7 @@ import './styles.css';
 import SideMenu from './SideMenu';
 import About from './About';
 import Contact from './Contact';
+import Music from './Music';
 import regeneratorRuntime from 'regenerator-runtime';
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
       <div id="main">
         <Switch>
           <Route path="/music">
-            <div>music links</div>
+            <Music />
           </Route>
           <Route path="/contact">
             <Contact />
