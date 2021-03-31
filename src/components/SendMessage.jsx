@@ -62,30 +62,34 @@ const SendMessage = () => {
   };
 
   return (
-    <div>
+    <form className="send-message">
       <h1 className="content-header">Send me a message!</h1>
       <input
+        className="form-input"
         type="text"
         placeholder="Name"
         onChange={(e) => setName(e.target.value)}
         value={name}
       />
       <input
+        className="form-input"
         type="text"
         placeholder="Subject"
         onChange={(e) => setSubject(e.target.value)}
         value={subject}
       />
       <textarea
+        className="text-input"
         value={message}
+        placeholder="Type your message..."
         onChange={(e) => setMessage(e.target.value)}
       ></textarea>
-      <button type="submit" onClick={submit}>
+      <button className="button-send" type="submit" onClick={submit}>
         Send
       </button>
       {isServerError ? <div>Sorry! A server error occurred</div> : null}
       {inputError ? <div>{inputError}</div> : null}
-    </div>
+    </form>
   );
 };
 
