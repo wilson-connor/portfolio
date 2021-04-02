@@ -6,10 +6,8 @@ import SendMessage from './SendMessage';
 const Contact = () => {
   return (
     <div className="content-contact">
-      <div className="content-item">
-        <h1 className="content-header">I'm looking for new opportunities!</h1>
-      </div>
-      <p className="content-text">Connect with me:</p>
+      <h1 className="content-header">I'm looking for new opportunities!</h1>
+      <h2 className="content-subheader">Connect with me:</h2>
       <div className="contact-links">
         <a href="https://www.linkedin.com/in/wilson-connor/" target="_blank">
           <FaLinkedin size={40} />

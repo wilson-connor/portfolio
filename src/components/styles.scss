@@ -50,6 +50,22 @@ ul {
   color: $white;
 }
 
+.content-header {
+  color: $white;
+  margin-bottom: 10px;
+}
+
+.content-text {
+  color: $white;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 3vh;
+}
+
+.content-subheader {
+  color: $white;
+}
+
 /* Mobile Menu */
 .menu {
   display: flex;
@@ -78,32 +94,12 @@ ul {
   display: block;
 }
 
-/* .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-} */
-
 /* mobile content */
 
 .content-about {
   display: grid;
   grid-template-rows: auto auto auto;
   justify-items: center;
-}
-
-.content-item {
-  margin: 10px;
-}
-
-.content-header {
-  color: $white;
-}
-
-.content-text {
-  color: $white;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .card {
@@ -113,6 +109,8 @@ ul {
 /* Mobile About Section */
 
 .title-card {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -124,6 +122,9 @@ ul {
 }
 
 /* Mobile Contact Section */
+
+.contact-connect {
+}
 
 .contact-links {
   display: flex;
@@ -195,6 +196,8 @@ ul {
 /* desktop changes */
 
 @media only screen and (min-width: 700px) {
+  /* Nav Changes */
+
   .toggle {
     display: none;
   }
@@ -215,12 +218,13 @@ ul {
     width: auto;
   }
 
-  /* About section changes */
+  /* General Changes */
+  .content-text {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 
-  /* .content-about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  } */
+  /* About section changes */
 
   .about-header {
     padding-top: 90px;
@@ -229,8 +233,14 @@ ul {
   .title-card {
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-gap: 50px;
+    grid-gap: 10vw;
   }
 
   /* Contact section changes */
+}
+
+@media only screen and (min-width: 1000px) {
+  .title-card {
+    grid-gap: 30vw;
+  }
 }

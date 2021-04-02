@@ -3,15 +3,11 @@ import React from 'react';
 const About = () => (
   <div className="content-about">
     <div className="title-card">
-      <div className="content-item">
-        <h1 className="content-header about-header">Hello! I'm Connor</h1>
-      </div>
-      <div className="card content-item">
-        <img
-          className="card-image"
-          src="https://portfolio-connor-wilson.s3.amazonaws.com/assets/Connor-headshot-cropped.jpg"
-        ></img>
-      </div>
+      <h1 className="content-header about-header">Hello! I'm Connor.</h1>
+      <img
+        className="card-image"
+        src="https://portfolio-connor-wilson.s3.amazonaws.com/assets/Connor-headshot-cropped.jpg"
+      ></img>
     </div>
     <p className="content-text">
       Aliquip occaecat id sint deserunt reprehenderit do aute nulla. Pariatur
